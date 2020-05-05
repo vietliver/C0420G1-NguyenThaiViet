@@ -4,31 +4,67 @@
     <meta charset="utf-8">
     <title>Bài Tập Tạo Form Đơn Giản</title>
     <style>
+      .background {
+        /*width: 50%;*/
+        background-color: #D5FEFF;
+      }
+      h2 {
+        background-color: #FF4B00;
+        text-align: center;
+      }
+      p {
+        display: inline-block;
+        text-align: right;
+        width: 100px;
+        margin: 5px;
+      }
+      .div {
+        position: relative;
+        left: 114px;
+        margin-bottom: 5px;
+      }
+      table {
+        display: inline-block;
+        margin-top:  ;
+      }
 
     </style>
   </head>
   <body>
+    <div class="background">
     <h2>SỞ THÍCH CỦA BẠN</h2>
     <form>
-      <p>Họ và tên</p>
+      <p style="float-right">Họ và tên</p>
       <input type="text" name="yourname">
       <br>
       <p>Email</p>
       <input type="text" name="email">
       <br>
       <p>Sở thích</p>
-      <input type="checkbox" name="hobby"> Thể thao
-      <input type="checkbox" name="hobby"> Âm nhạc
-      <input type="checkbox" name="hobby"> Đọc sách
+      <table>
+        <tr>
+          <td> <input type="checkbox" name="hobby"> Thể thao </td>
+          <td> <input type="checkbox" name="hobby"> Âm nhạc </td>
+          <td> <input type="checkbox" name="hobby"> Đọc sách </td>
+        </tr>
+<!--      <input type="checkbox" name="hobby"> Thể thao-->
+<!--      <input type="checkbox" name="hobby"> Âm nhạc-->
+<!--      <input type="checkbox" name="hobby"> Đọc sách-->
+      </table>
       <br>
+      <div class="div">
       <input type="checkbox" name="hobby"> Lướt web
       <input type="checkbox" name="hobby"> Chơi game
       <input type="checkbox" name="hobby"> Điện ảnh
-      <br>
+      </div>
+      <div class="div">
       <input type="checkbox" name="hobby"> Du lịch
-      <br><br>
+      </div>
+      <div class="submit-reset">
       <input type="submit" value="Gửi thông tin">
       <input type="reset" value="Nhập lại">
+      <br>
     </form>
+    </div>
   </body>
 </html>
