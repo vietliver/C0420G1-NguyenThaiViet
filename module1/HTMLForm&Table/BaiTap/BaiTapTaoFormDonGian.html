@@ -1,70 +1,155 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Bài Tập Tạo Form Đơn Giản</title>
-    <style>
-      .background {
-        /*width: 50%;*/
-        background-color: #D5FEFF;
-      }
-      h2 {
-        background-color: #FF4B00;
-        text-align: center;
-      }
-      p {
-        display: inline-block;
-        text-align: right;
-        width: 100px;
-        margin: 5px;
-      }
-      .div {
-        position: relative;
-        left: 114px;
-        margin-bottom: 5px;
-      }
-      table {
-        display: inline-block;
-        margin-top:  ;
-      }
 
-    </style>
-  </head>
-  <body>
-    <div class="background">
+<head>
+  <meta charset="utf-8">
+  <title>Bài Tập Tạo Form Đơn Giản</title>
+  <style>
+    body {
+      background-color: #D5FEFF;
+    }
+
+    .background {
+      width: 50%;
+      background-color: white;
+      padding: 10px;
+    }
+
+    h2 {
+      background-color: #FF4B00;
+      text-align: center;
+      color: white;
+      margin: 0;
+      padding: 5px 0;
+    }
+
+    p {
+      display: inline-block;
+      color: blue;
+      margin: 7px;
+    }
+
+    .input-checkbox {
+      color: orange;
+    }
+
+    .title {
+      width: 15%;
+      text-align: right;
+    }
+
+    .submit-reset {
+      position: relative;
+      left: 16%;
+    }
+    .background2 {
+      width: 50%;
+      background-color: #FFFEA8;
+      padding: 10px;
+    }
+    .title2 {
+      width: 15%;
+      text-align: left;
+    }
+    .submit-reset2 {
+      position: relative;
+      left: 18%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
     <h2>SỞ THÍCH CỦA BẠN</h2>
     <form>
-      <p style="float-right">Họ và tên</p>
-      <input type="text" name="yourname">
-      <br>
-      <p>Email</p>
-      <input type="text" name="email">
-      <br>
-      <p>Sở thích</p>
-      <table>
-        <tr>
-          <td> <input type="checkbox" name="hobby"> Thể thao </td>
-          <td> <input type="checkbox" name="hobby"> Âm nhạc </td>
-          <td> <input type="checkbox" name="hobby"> Đọc sách </td>
-        </tr>
-<!--      <input type="checkbox" name="hobby"> Thể thao-->
-<!--      <input type="checkbox" name="hobby"> Âm nhạc-->
-<!--      <input type="checkbox" name="hobby"> Đọc sách-->
-      </table>
-      <br>
-      <div class="div">
-      <input type="checkbox" name="hobby"> Lướt web
-      <input type="checkbox" name="hobby"> Chơi game
-      <input type="checkbox" name="hobby"> Điện ảnh
+      <div>
+        <p class="title">Họ và tên</p>
+        <input type="text" name="yourname">
       </div>
-      <div class="div">
-      <input type="checkbox" name="hobby"> Du lịch
+
+      <div>
+        <p class="title">Email</p>
+        <input type="text" name="email">
       </div>
+
+      <div>
+        <p class="title" style="float: left">Sở thích</p>
+        <div style="display: inline-block;">
+          <div>
+            <input type="checkbox" name="hobby">
+            <p class="input-checkbox">Thể thao</p>
+            <input type="checkbox" name="hobby">
+            <p class="input-checkbox"> Âm nhạc</p>
+            <input type="checkbox" name="hobby">
+            <p class="input-checkbox">Đọc sách</p>
+          </div>
+          <div>
+            <input type="checkbox" name="hobby">
+            <p class="input-checkbox"> Lướt web</p>
+            <input type="checkbox" name="hobby">
+            <p class="input-checkbox"> Chơi game</p>
+            <input type="checkbox" name="hobby">
+            <p class="input-checkbox">Điện ảnh</p>
+          </div>
+          <div>
+            <input type="checkbox" name="hobby">
+            <p class="input-checkbox">Du lịch</p>
+          </div>
+        </div>
+      </div>
+
       <div class="submit-reset">
+        <input type="submit" value="Gửi thông tin">
+        <input type="reset" value="Nhập lại">
+      </div>
+    </form>
+</div>
+
+  <!-- Phần 2 bắt đầu từ đây -->
+
+  <!-- <h2>ĐĂNG KÝ HỌC VIÊN</h2> -->
+<div class="background2">
+  <h2 style="background-color: #D3FDD6; color: blue; text-align: left;">ĐĂNG KÝ HỌC VIÊN</h2>
+  <form>
+    <div>
+      <p class="title2">Họ và tên</p>
+      <input type="text" name="yourname">
+    </div>
+    <div>
+      <p class="title2">Ngày sinh</p>
+      <input type="text" name="birthday">
+    </div>
+    <div>
+      <p class="title2">Ngày sinh</p>
+      <input type="radio" name="male"> Nam
+      <input type="radio" name="female"> Nữ
+    </div>
+    <div>
+      <p class="title2" style="position: relative; bottom: 55px;">Địa chỉ</p>
+      <textarea cols="30" rows="5"></textarea>
+    </div>
+    <div>
+      <p class="title2">Lớp</p>
+      <select class="" name="class">
+        <option value="10">-Chọn lớp-</option>
+        <option value="11">-Chọn lớp-</option>
+      </select>
+    </div>
+    <div>
+      <p class="title2">Email</p>
+      <input type="text" name="email">
+    </div>
+    <div>
+      <p class="title2">Điện thoại</p>
+      <input type="text" name="phone">
+    </div>
+    <div class="submit-reset2">
       <input type="submit" value="Gửi thông tin">
       <input type="reset" value="Nhập lại">
-      <br>
-    </form>
     </div>
-  </body>
+  </form>
+</div>
+
+
+</body>
 </html>
