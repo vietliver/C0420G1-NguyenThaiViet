@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Javascript can change HTML elements</h1>
+    <p id="test">Look at me</p>
+    <button type="button" onclick="document.getElementById('test').innerHTML = 'Now I changed'">Make me change</button>
+    <h2>What Can JavaScript Do?</h2>
+  <p>JavaScript can change HTML attributes.</p>
+  <p>In this case JavaScript changes the src (source) attribute of an image.</p>
+  <img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+
+  <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button>
+  <button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Turn off the light</button>
+
+
+  </body>
+</html>
