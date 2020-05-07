@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bai 1: Tinh Tong Diem Va Diem Trung Binh
+    let ly = parseInt(prompt("Nhap diem mon Vat Ly"));
+    let hoa = parseInt(prompt("Nhap diem mon Hoa Hoc"));
+    let sinh = parseInt(prompt("Nhap diem mon Sinh Hoc"));
+    let average = (ly + hoa + sinh) / 3;
+    let sum = ly + hoa + sinh;
+    alert("Diem trung binh la: " + average + ". Tong diem la: " + sum + ".");
+
+    // Bai 2: Doi Do C -> Do F
+    let doC = parseInt(prompt("Nhap do C"));
+    let doF = doC*9/5 + 32;
+    alert(doC + " do C tuong duong voi: " + doF + " do F.");
+
+    // Bai 3,4: Tinh Dien Tich Va Chu Vi Hinh Tron
+    let r = parseInt(prompt("Nhap ban kinh hinh tron"));
+    const PI = 3.14;
+    let s = r*r*PI;
+    let c = 2*r*PI;
+    alert("Dien tich hinh tron la: " + s + ", chu vi hinh tron la: " + c);
+
+</script>
+</body>
+</html>
