@@ -15,14 +15,29 @@
 <input id="1">
 <input id="2">
 <br>
-<button type="button" onclick="addition()">Addition(+)</button>
-<button type="button" onclick="subtraction()">Subtraction(-)</button>
-<button type="button" onclick="multiplication()">Multiplication(*)</button>
-<button type="button" onclick="division()">Division(/)</button>
+<button type="button" onclick="calculation(1);">Addition(+)</button>
+<button type="button" onclick="calculation(2);">Subtraction(-)</button>
+<button type="button" onclick="calculation(3);">Multiplication(*)</button>
+<button type="button" onclick="calculation(4);">Division(/)</button>
 <br>
 <p id="result"></p>
 
 <script>
+    function calculation(i) {
+        let x = parseInt(document.getElementById("1").value);
+        let y = parseInt(document.getElementById("2").value);
+        if (i == 1) {
+            document.getElementById("result").innerHTML = "Result Addition: " + (x+y);
+        } else if (i == 2) {
+            document.getElementById("result").innerHTML = "Result Subtraction: " + (x-y);
+        } else if (i == 3) {
+            document.getElementById("result").innerHTML = "Result Subtraction: " + (x*y);
+        } else {
+            document.getElementById("result").innerHTML = "Result Subtraction: " + (x/y);
+        }
+    }
+
+    /*Dung 4 Ham
     function addition() {
         let x = parseInt(document.getElementById("1").value);
         let y = parseInt(document.getElementById("2").value);
@@ -42,7 +57,7 @@
         let x = parseInt(document.getElementById("1").value);
         let y = parseInt(document.getElementById("2").value);
         document.getElementById("result").innerHTML = "Result Subtraction: " + (x/y);
-    }
+    }*/
 </script>
 </body>
 </html>
