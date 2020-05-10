@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label>Tính số ngày trong tháng:</label>
+    <input id="1">
+    <button type="button" onclick="cal();">Tính số ngày</button>
+</form>
+<script>
+    function cal() {
+        let x = parseInt(document.getElementById("1").value);
+        switch (x) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert("Thang " + x + " co 31 ngay.");
+                break;
+            case 2:
+                alert("Thang " + x + " co 28 hoac 29 ngay.");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert("Thang " + x + " co 30 ngay.");
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>
