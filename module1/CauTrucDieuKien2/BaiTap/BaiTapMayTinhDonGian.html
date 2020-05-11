@@ -12,45 +12,57 @@
             color: blue;
             border-color: lightgrey;
         }
-        p {
-            width: 286px;
+        #display {
+            width: 288px;
             font-size: x-large;
             color: blue;
             text-align: right;
-            border: 1px solid lightgrey;
             margin: 0 0 10px;
-            padding: 10px 0;
+            padding: 20px 10px;
             position: relative;
             left: 6px;
+            border: 1px solid lightgrey;
         }
     </style>
 </head>
 <body>
-    <p>1</p>
-    <button class="number" type="button" onclick="display(1);" value="1">1</button>
-    <button class="number" type="button" onclick="calculation(2);" value="2">2</button>
-    <button class="number" type="button" onclick="calculation(3);" value="3">3</button>
-    <button class="number" type="button" onclick="calculation('+');">+</button>
+    <form>
+        <input type="button" id="display">
+    </form>
+    <div>
+    <button type="button" onclick="insert(1);">1</button>
+    <button type="button" onclick="insert(2);">2</button>
+    <button type="button" onclick="insert(3);">3</button>
+    <button type="button" onclick="insert(' + ');">+</button>
     <br>
-    <button type="button" onclick="calculation(4);" value="4">4</button>
-    <button type="button" onclick="calculation(5);" value="5">5</button>
-    <button type="button" onclick="calculation(6);" value="6">6</button>
-    <button type="button" onclick="calculation('-');">-</button>
+    <button type="button" onclick="insert(4);">4</button>
+    <button type="button" onclick="insert(5);">5</button>
+    <button type="button" onclick="insert(6);">6</button>
+    <button type="button" onclick="insert(' - ');">-</button>
     <br>
-    <button type="button" onclick="calculation(7);" value="7">7</button>
-    <button type="button" onclick="calculation(8);" value="8">8</button>
-    <button type="button" onclick="calculation(9);" value="9">9</button>
-    <button type="button" onclick="calculation('x');">x</button>
+    <button type="button" onclick="insert(7);">7</button>
+    <button type="button" onclick="insert(8);">8</button>
+    <button type="button" onclick="insert(9);">9</button>
+    <button type="button" onclick="insert(' * ');">x</button>
     <br>
-    <button type="button" onclick="calculation('clear');">C</button>
-    <button type="button" onclick="calculation(0);" value="0">0</button>
-    <button type="button" onclick="calculation('equal');">=</button>
-    <button type="button" onclick="calculation('/');">/</button>
+    <button type="button" onclick="c();">C</button>
+    <button type="button" onclick="insert(0);">0</button>
+    <button type="button" onclick="calculation();">=</button>
+    <button type="button" onclick="insert(' / ');">/</button>
+    </div>
 
 <script>
-    function display(x) {
-        let x = document.getElementsByClassName("number").value;
-
+    function insert(num) {
+        document.getElementById("display").value = document.getElementById("display").value + num;
+    }
+    function calculation() {
+        let x = document.getElementById("display").value;
+        if (x) {
+            document.getElementById("display").value = eval(document.getElementById("display").value);
+        }
+    }
+    function c() {
+        document.getElementById("display").value = "";
     }
 </script>
 </body>
