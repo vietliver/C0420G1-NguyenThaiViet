@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bai 1:  Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không:
+    let a = parseInt(prompt("Nhap so a"));
+    let b = parseInt(prompt("Nhap so b"));
+    if (a % b == 0) {
+        alert("a chia het cho b");
+    } else {
+        alert("a khong chia het cho b");
+    }
+
+    // Bai 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.
+    let age = parseInt(prompt("Nhap tuoi"));
+    if (age <= 16) {
+        alert("Khong du tuoi vao lop 10.");
+    }
+
+    // Bai 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0:
+    let bai3 = parseInt(prompt("Nhap so nguyen bat ky"));
+    if (bai3 > 0) {
+        alert(bai3 + " lon hon 0.");
+    } else if (bai3 = 0) {
+        alert(bai3 + " bang 0.");
+    } else {
+        alert(bai3 + " nho hon 0.");
+    }
+
+    // Bai 4:  Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+    let num1 = parseInt(prompt("Nhap so thu nhat"));
+    let num2 = parseInt(prompt("Nhap so thu hai"));
+    let num3 = parseInt(prompt("Nhap so thu ba"));
+    if (num1 > num2) {
+        if (num1 > num3) {
+            alert(num1 + " la so lon nhat.")
+        } else {
+            alert(num3 + " la so lon nhat.")
+        }
+    } else if (num2 > num3) {
+        alert(num2 + " la so lon nhat.")
+    } else {
+        alert(num3 + " la so lon nhat.")
+    }
+
+    // Bai 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+    // Bai 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+    // Bai 7: Tính cước điện thoại cho một hộ gia đình với các thông số đã cho
+
+</script>
+</body>
+</html>
