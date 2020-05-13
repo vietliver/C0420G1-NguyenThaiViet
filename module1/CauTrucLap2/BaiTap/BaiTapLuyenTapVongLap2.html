@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: In dãy Fibonacci
+    let number = parseInt(prompt("Nhap so luong day so Fibonacci ban muon hien thi:"));
+    let a1 = 0;
+    let a2 = 1;
+    let temp;
+    let result = "0  1  ";
+    switch (number) {
+        case 1: {
+            document.write("Day so "+ number + " so fibonacci: " + "<br>" + "0");
+            break;
+        }
+        case 2: {
+            document.write("Day so "+ number + " so fibonacci: " + "<br>" + result);
+            break;
+        }
+        default: {
+            for (let i = 3; i <= number; i++) {
+                temp = a2;
+                a2 = a1 + a2;
+                a1 = temp;
+                result += a2 + "  ";
+            }
+            document.write("Day so "+ number + " so fibonacci: " + "<br>" + result);
+        }
+    }
+
+    // Bài 2: Tính giai thừa của một số nguyên dương
+    document.write("<br>");
+    document.write("<br>");
+    number = parseInt(prompt("Nhap so nguyen duong de tinh giai thua:"));
+    if (number == 0) {
+        document.write("O! = 1");
+    } else if (number <0) {
+        alert("So ban nhap khong phai so nguyen duong");
+    } else {
+        let text = "";
+        for (let i = 1; i <= number; i++) {
+            text += i + "*";
+        }
+        // Xoá ký tự * dư cuối chuỗi
+        text = text.slice(0, -1);
+        document.write("Ket qua giai thua: " + "<br>" + number + "! = " + eval(text));
+    }
+
+    // Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau
+    document.write("<br>");
+    document.write("<br>");
+    let line = "";
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            line += "*";
+        }
+        line = line + "<br>";
+    }
+    document.write(line);
+
+    document.write("<br>");
+    line ="";
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+            line += "*";
+        }
+        line = line + "<br>";
+    }
+    document.write(line);
+
+
+
+</script>
+</body>
+</html>
