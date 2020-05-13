@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = parseInt(prompt("Nhap so luong so nguyen to can in ra: "));
+    let count = 0;
+    let n = 2;
+    let result = "";
+    while (count < numbers) {
+        let flag = true;
+        for (let i = 2; i < n; i++) {
+            if (n % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            result += n + " ";
+            count++;
+        }
+        n++;
+    }
+    document.write(numbers + " so nguyen to ban can tim la: " + "<br>" + result);
+</script>
+</body>
+</html>
