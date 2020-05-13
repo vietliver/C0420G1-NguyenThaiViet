@@ -14,7 +14,7 @@
     document.write("Finish: " + "<br>" + text);
 
     // Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
-    // while (true) {
+    /*// while (true) {
         let x = parseInt(prompt("Hay nhap nhiet do"));
         if (x >= 100) {
             alert("Hay giam nhiet do");
@@ -23,7 +23,7 @@
             alert("Hay tang nhiet do");
             // break;
         }
-    // }
+    // }*/
 
     // Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
     document.write("<br>");
@@ -96,7 +96,65 @@
     }
 
     // Bài 8: Game đoán số:
-    
+    document.write("<br>");
+    document.write("<p>Hãy thử đoán xem</p>")
+    document.write("<button type='button' onclick='random();'>Play</button>");
+    function random() {
+        let option = parseInt(prompt("Bạn muốn dự đoán trong khoảng nào? " + "\n" +
+                "1. Từ 0-10" + "\n" +
+                "2. Từ 10-20" + "\n" +
+                "3. Từ 20-30" + "\n"));
+        switch (option) {
+            case 1: {
+                let value = parseInt(Math.random()*10);
+                let guess = parseInt(prompt("Nhập giá trị dự đoán của bạn:"));
+                for (let i = 1; i <=3; i++) {
+                    if (guess == value) {
+                        alert("Chúc mừng bạn đã đoán đúng!");
+                        break;
+                    } else if (guess > value) {
+                        guess = parseInt(prompt("Hãy chọn giá trị nhỏ hơn:"));
+                    } else {
+                        guess = parseInt(prompt("Hãy chọn giá trị lớn hơn:"));
+                    }
+                }
+                break;
+            }
+            case 2: {
+                let value = parseInt(Math.random()*10 + 10);
+                let guess = parseInt(prompt("Nhập giá trị dự đoán của bạn:"));
+                for (let i = 1; i <=3; i++) {
+                    if (guess == value) {
+                        alert("Chúc mừng bạn đã đoán đúng!");
+                        break;
+                    } else if (guess > value) {
+                        guess = parseInt(prompt("Hãy chọn giá trị nhỏ hơn:"));
+                    } else {
+                        guess = parseInt(prompt("Hãy chọn giá trị lớn hơn:"));
+                    }
+                }
+                break;
+            }
+            case 3: {
+                let value = parseInt(Math.random()*10+20);
+                let guess = parseInt(prompt("Nhập giá trị dự đoán của bạn:"));
+                for (let i = 1; i <=3; i++) {
+                    if (guess == value) {
+                        alert("Chúc mừng bạn đã đoán đúng!");
+                        break;
+                    } else if (guess > value) {
+                        guess = parseInt(prompt("Hãy chọn giá trị nhỏ hơn:"));
+                    } else {
+                        guess = parseInt(prompt("Hãy chọn giá trị lớn hơn:"));
+                    }
+                }
+                break;
+            }
+            default: {
+                alert("Ban da nhap sai");
+            }
+        }
+    }
 
 
 </script>
