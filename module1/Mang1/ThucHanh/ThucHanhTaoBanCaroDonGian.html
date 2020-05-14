@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>CARO GAME</h1>
+<div id="display"></div>
+<script>
+    let board = [];
+    let text = "";
+
+    // Gán giá trị các cột và dòng 0 cho bảng 2 chiều:
+    for (let i = 0; i < 5; i++) {
+        board[i] = [0, 0, 0, 0, 0];
+    }
+    // Chạy vòng lặp để hiển thị bảng caro + button dùng biến text:
+    for (let i = 0; i < 5; i++) {
+        text += "<br>";
+        for (let j = 0; j < 5; j++) {
+            text += board[i][j] + " ";
+        }
+    }
+    // Thêm button vào biến text:
+    text += "<br><input type='button' value='Change Value' onclick='changeValue()'>"
+    document.getElementById("display").innerHTML = text;
+
+    function changeValue() {
+        let x = prompt("X: ");
+        let y = prompt("Y: ");
+        text = "";
+        board[x][y] = "x";
+        for (let i = 0; i < 5; i++) {
+            text += "<br>";
+            for (let j = 0; j < 5; j++) {
+                text += board[i][j] + " ";
+            }
+        }
+        text += "<br><input type='button' value='Change Value' onclick='changeValue()'>"
+        document.getElementById("display").innerHTML = text;
+    }
+</script>
+</body>
+</html>
