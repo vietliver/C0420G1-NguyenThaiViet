@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [-3, 5, 1, 3, 2, 10];
+    let firstElement = 0;
+    let lastElement = array.length - 1;
+    // Dung phuong thuc reverse
+    document.write(array.reverse());
+
+    // Dung vong lap
+    for (firstElement; firstElement < lastElement; firstElement++) {
+        let temp = array[firstElement];
+        array[firstElement] = array[lastElement];
+        array[lastElement] = temp;
+        lastElement--;
+    }
+    document.write("<br>" + array);
+
+</script>
+
+</body>
+</html>
