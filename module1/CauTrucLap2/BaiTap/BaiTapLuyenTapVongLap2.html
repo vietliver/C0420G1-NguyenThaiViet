@@ -53,6 +53,7 @@
     // Bài 3: In tam giác vuông. Các góc vuông nằm ở các vị trí khác nhau
     document.write("<br>");
     document.write("<br>");
+    // Tam giac 1
     let line = "";
     for (let i = 1; i <= 5; i++) {
         for (let j = 1; j <= i; j++) {
@@ -63,12 +64,119 @@
     document.write(line);
 
     document.write("<br>");
+    // Tam giac 2
     line ="";
     for (let i = 5; i >= 1; i--) {
         for (let j = 1; j <= i; j++) {
             line += "*";
         }
         line = line + "<br>";
+    }
+    document.write(line);
+
+    document.write("<br>");
+    // Tam giac 3
+    line ="";
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 5; j >= 1; j--) {
+            if (i >= j) {
+                line += "*";
+            } else {
+                line += "&nbsp;&nbsp;";
+            }
+        }
+        line += "<br>";
+    }
+    document.write(line);
+
+    document.write("<br>");
+    // Tam giac 4
+    line ="";
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+            if (i <= j) {
+                line += "*";
+            } else {
+                line += "&nbsp;&nbsp;";
+            }
+        }
+        line += "<br>";
+    }
+    document.write(line);
+
+    // Bài 4: In hình chữ nhật
+    document.write("<br>");
+    line="";
+    for (let i = 1; i <=1 ; i++) {
+        for (let j = 1; j <= 20; j++) {
+                line += "*";
+            }
+        line += "<br>";
+    }
+    for (let i = 1; i <=5 ; i++) {
+        for (let j = 1; j <= 20; j++) {
+            if (j == 1 || j == 20) {
+                line += "*";
+            } else {
+                line += "&nbsp;&nbsp;";
+            }
+        }
+        line += "<br>";
+    }
+    for (let i = 1; i <=1 ; i++) {
+        for (let j = 1; j <= 20; j++) {
+            line += "*";
+        }
+        line += "<br>";
+    }
+    document.write(line);
+
+    // Bài 5: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+    let tienGoc = parseInt(prompt("Nhap so tien ban dau"));
+    let tienPhaiTra = tienGoc;
+    let soThang = parseInt(prompt("Nhap so thang cho vay"));
+    let r = parseInt(prompt("Nhap lai suat hang thang (%)"));
+    temp = 0;
+    let i = 1;
+    while (i <= soThang) {
+        temp = tienPhaiTra * (1 + r/100)
+        tienPhaiTra = temp;
+        i++;
+    }
+    let tienLai = (tienPhaiTra - tienGoc).toFixed(2);
+    alert("Tien lai phai tra: " + tienLai);
+
+    // Bài 6: In hình trái tim
+    document.write("<br>");
+    line = "";
+    for (let i = 1; i <= 2 ; i ++) {
+        for (let j = 1; j <= 9; j++) {
+            if (i==1) {
+                if ((j-1) % 4 == 0) {
+                    line += "&nbsp;&nbsp;";
+                } else {
+                    line += "*";
+                }
+            } else if (i==2) {
+                if ((j-1) % 4 == 0) {
+                    line += "*";
+                } else {
+                    line += "&nbsp;&nbsp;";
+                }
+            }
+        }
+        line += "<br>";
+    }
+    let k;
+    for (let i = 1, k = 8; i <= 5 ; i ++, k-=2) {
+        for (let j = 1; j <= 9; j++) {
+            if (j == i || j == i + k) {
+                line += "*";
+            } else {
+                line += "&nbsp;&nbsp;";
+            }
+        }
+        line += "<br>";
     }
     document.write(line);
 
