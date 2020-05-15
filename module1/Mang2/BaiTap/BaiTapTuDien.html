@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tra Từ Cần Tìm</h1>
+<input id="inputText" onclick="clear()">
+<button type="button" onclick="search();">Search</button>
+<p id="display"></p>
+</body>
+<script>
+    let arrayEng = ["phone", "pen", "book", "computer", "mouse"];
+    let arrayViet = ["dien thoai", "but", "sach", "may tinh", "chuot"];
+
+    function search() {
+        let text = document.getElementById("inputText").value;
+        for (let i = 0; i < arrayEng.length; i++) {
+            if (text == arrayEng[i]) {
+                document.getElementById("display").innerHTML = arrayViet[i];
+                break;
+            } else {
+                document.getElementById("display").innerHTML = "Không tìm thấy";
+            }
+        }
+    }
+</script>
+</html>
