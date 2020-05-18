@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        textarea {
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<h1>Type anything slowly</h1>
+<textarea id="display" onkeydown="changeOutput();"></textarea>
+<script>
+    let array = ['T', 'O', 'I', ' ', 'L', 'A', ' ', 'M', 'O', 'T', ' ', 'D', 'U', 'A', ' ','N','G','O','C'];
+    let output = "";
+    let input = document.getElementById("display");
+    function changeOutput() {
+        for (let i = 0; i < input.value.length; i++) {
+            output += array[i];
+        }
+        input.value = output;
+        output = "";
+        if (input.value.length > array.length) {
+            input.value = "";
+            output = "";
+        }
+        setTimeout("changeOutput()", 1)
+    }
+</script>
+</body>
+
+</html>
