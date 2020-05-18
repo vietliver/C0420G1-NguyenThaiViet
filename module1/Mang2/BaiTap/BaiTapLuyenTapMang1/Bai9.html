@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 9- Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b. Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+    let array1 = [3,31,13,23,54,65,12,39,0,8];
+    let array2 = [23,81,7,22,14,5,1,29,10,99];
+    let array3 = new Array(20);
+    array3 = array1.concat(array2);
+    document.write("Array 1: " + array1.join(" ") + "<br>");
+    document.write("Array 2: " + array2.join(" ") + "<br>");
+    document.write("Array 3: " + array1.concat(array2).join(" "));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Enter V:</label>
+<input id="input">
+<button type="button" id="button" onclick="findV();">Submit</button>
+<br>
+<div id="display"></div>
+<script>
+    // Bài 6- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+    let array = [3,31,13,23,54,65,12,39,0,8];
+    function findV() {
+        let num = document.getElementById("input").value;
+        let index = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == num) {
+                index = i;
+                document.getElementById("display").innerHTML = "V is in the array, at index: " + index;
+                break;
+            } else {
+                document.getElementById("display").innerHTML = "V is not in the array";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

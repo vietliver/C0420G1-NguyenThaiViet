@@ -20,12 +20,16 @@
     let array = ['T', 'O', 'I', ' ', 'L', 'A', ' ', 'M', 'O', 'T', ' ', 'D', 'U', 'A', ' ','N','G','O','C'];
     let output = "";
     let input = document.getElementById("display");
+
+    // Thay input bang array cua minh
     function changeOutput() {
         for (let i = 0; i < input.value.length; i++) {
             output += array[i];
         }
         input.value = output;
         output = "";
+
+        // Làm trống ô display khi input nhập vào lớn hơn số ký tự của array
         if (input.value.length > array.length) {
             input.value = "";
             output = "";
