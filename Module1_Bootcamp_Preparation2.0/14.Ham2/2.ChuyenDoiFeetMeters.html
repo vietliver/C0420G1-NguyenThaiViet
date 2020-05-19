@@ -12,12 +12,12 @@
 <input id="meter" type="number" oninput="meterToFoot(this.value);">
 </body>
 <script>
-    function footToMeter() {
-        x = parseFloat(document.getElementById("foot").value);
+    function footToMeter(x) {
+        x = parseFloat(x);
         document.getElementById("meter").value = x * 0.305;
     }
-    function meterToFoot() {
-        x = parseFloat(document.getElementById("meter").value);
+    function meterToFoot(x) {
+        x = parseFloat(x);
         document.getElementById("foot").value = x * 3.279;
     }
 </script>
