@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Foot</label>
+<input id="foot" type="number" oninput="footToMeter();">
+<br>
+<label>Meter</label>
+<input id="meter" type="number" oninput="meterToFoot();">
+</body>
+<script>
+    function footToMeter() {
+        let x = parseFloat(document.getElementById("foot").value);
+        document.getElementById("meter").value = x * 0.305;
+    }
+    function meterToFoot() {
+        let x = parseFloat(document.getElementById("meter").value);
+        document.getElementById("foot").value = x * 3.279;
+    }
+</script>
+</html>

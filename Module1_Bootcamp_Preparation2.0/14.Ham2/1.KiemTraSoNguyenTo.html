@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputNumber = parseInt(prompt("Nhap so can kiem tra: "));
+    isPrime(inputNumber);
+    function isPrime(num) {
+        let flag = true;
+        for (let i = 2; i < num; i++) {
+            if (num % i == 0) {
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            alert(inputNumber + " la so nguyen to");
+        } else {
+            alert(inputNumber + " khong phai so nguyen to");
+        }
+    }
+
+</script>
+</body>
+</html>
