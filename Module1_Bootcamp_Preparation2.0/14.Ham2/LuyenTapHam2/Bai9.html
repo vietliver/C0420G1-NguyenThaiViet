@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 9: Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ, kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không. Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+    function check(x) {
+        let array = ["c","a","e","s","a","a","z"];
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == x) {
+                count++;
+            }
+        }
+        if (count>0) {
+            alert(x + " nam trong mang, xuat hien " + count + " lan.");
+        } else {
+            alert("-1");
+        }
+    }
+    let input = prompt("Nhap ky tu bat ky");
+    check(input);
+</script>
+</body>
+</html>
