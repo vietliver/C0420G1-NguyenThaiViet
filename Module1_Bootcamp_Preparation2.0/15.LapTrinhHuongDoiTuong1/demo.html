@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+<script>
+    // // function Apple (type, color) {
+    // //     this.type = type;
+    // //     this.color = color;
+    // //     this.getInfo = function() {
+    // //         return this.color + ' ' + this.type + ' apple';
+    // //     }
+    // // }
+    // //
+    // // let apple = new Apple('macintosh', "space grey");
+    // // alert(apple.getInfo());
+    // class Apple {
+    //     constructor(type, color) {
+    //         this.type = type;
+    //         this.color = color;
+    //         // this.getInfo = function() {
+    //         //     return this.color + ' ' + this.type + ' apple';
+    //         }
+    //         getInfo(who) = function {
+    //         alert(' apple ' + who);
+    //     }
+    // }
+    // let apple1 = new Apple("vietnam","red");
+    // alert(apple1.getInfo(me));
+    // var title = new String("Em ơi Hà Nội phố");
+    // alert(typeof title);
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+
+    var ctx = c.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(100,50,50,0,2*Math.PI);
+    ctx.stroke();
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillText("Hello World",10,50);
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.strokeText("Hello Worlddd",10,50);
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    // Create gradient
+    var grd = ctx.createLinearGradient(0,0,200,0);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+    // Create gradient
+    var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+    grd.addColorStop(0,"red");
+    grd.addColorStop(1,"white");
+
+    // Fill with gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+
+
+</script>
+
+</body>
+</html>
