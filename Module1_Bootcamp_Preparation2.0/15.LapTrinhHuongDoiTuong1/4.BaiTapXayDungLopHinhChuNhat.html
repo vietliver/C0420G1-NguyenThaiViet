@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800" style="border:1px solid #d3d3d3;">
+<script>
+    class Rectangle {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+            this.area = function () {
+                alert("Dien tich: " + x*y);
+            }
+            this.perimiter = function () {
+                alert("Chu vi: " + 2*(x+y));
+            }
+            this.createRectangle = function () {
+                let ctx = document.getElementById("myCanvas").getContext("2d");
+                ctx.fillRect(100,100,x,y);
+            }
+        }
+    }
+
+    let rec = new Rectangle(500, 200);
+    rec.createRectangle();
+    rec.x = 300;
+    rec.y = 100;
+    rec.area();
+    rec.perimiter();
+
+
+
+
+</script>
+</body>
+</html>
