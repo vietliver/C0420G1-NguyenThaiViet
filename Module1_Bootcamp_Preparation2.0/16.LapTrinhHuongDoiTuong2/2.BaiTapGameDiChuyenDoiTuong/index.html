@@ -48,37 +48,35 @@
 
     let hero = new Hero("goku.png", 0, 0, 300);
     speed = 50;
-    function Right() {
-        if (hero.left < window.innerWidth - hero.size) {
-            hero.moveRight();
+    let direction = prompt("Which way do you want to move Goku?");
+    function start() {
+        switch (direction) {
+            case "right":
+                if (hero.left < window.innerWidth - hero.size) {
+                    hero.moveRight();
+                }
+                break;
+            case "left":
+                if (hero.left > window.innerWidth - hero.size) {
+                    hero.moveLeft();
+                }
+                break;
+            case "top":
+                if (hero.top > 0) {
+                    hero.moveUp();
+                }
+                break;
+            case "bottom":
+                if (hero.top >= 0 && hero.top < window.innerHeight - hero.size) {
+                    hero.moveDown();
+                }
+                break;
         }
-        document.getElementById("game").innerHTML = hero.getHeroElement();
-    }
-    setInterval(Right,100);
+        document.getElementById('game').innerHTML = hero.getHeroElement();
+        setTimeout(start, 100);
 
-    /*function Left() {
-        if (hero.left > window.innerWidth - hero.size) {
-            hero.moveLeft();
-        }
-        document.getElementById("game").innerHTML = hero.getHeroElement();
     }
-    setInterval(Left,100);
-
-    function Up() {
-        if (hero.top < window.innerHeight - hero.size) {
-            hero.moveUp();
-        }
-        document.getElementById("game").innerHTML = hero.getHeroElement();
-    }
-    setInterval(Up,100);
-
-    function Down() {
-        if (hero.top > window.innerHeight - hero.size) {
-            hero.moveDown();
-        }
-        document.getElementById("game").innerHTML = hero.getHeroElement();
-    }
-    setInterval(Down,100);*/
+    start();
 
 </script>
 </body>
