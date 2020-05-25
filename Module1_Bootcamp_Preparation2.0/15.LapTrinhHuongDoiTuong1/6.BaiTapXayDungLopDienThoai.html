@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        constructor(status, batteryLevel) {
+            this.status = status;
+            this.batteryLevel = batteryLevel;
+            this.typingMessage = [];
+            this.inboxMessage = [];
+            this.sentMessage = [];
+        }
+        isOnOrOff() {
+            if(this.status) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        turnOnOrOff() {
+            if(status) {
+                this.status = false;
+            } else {
+                this.status = true;
+            }
+        }
+        charge() {
+            while (this.batteryLevel < 100){
+                this.batteryLevel += 0.00001;
+            }
+        }
+        typeMessage(){
+            if(this.isOnOrOff()) {
+                let temp = prompt("Nội dung tin nhắn bạn muốn soạn thao:");
+                this.typingMessage.push(temp);
+            } else {
+                alert("Diện thoại đang tắt")
+            }
+            this.batteryLevel--;
+        }
+        sendAndReceiveMessage (mobile) {
+            if (this.isOnOrOff()) {
+                let temp = "";
+                for (let i = 0; i < this.typingMessage.length; i++) {
+                    temp += (i+1) + "." + this.typingMessage[i] + "\n";
+                }
+                let index = prompt("Mời bạn nhập thư muốn gửi:\n" + temp);
+                mobile.inboxMessage.push(this.typingMessage[index-1]);
+                this.sentMessage.push(this.typingMessage[index-1]);
+                this.typingMessage.splice(index-1,1);
+            } else {
+                alert("Diện thoại đang tắt")
+            }
+            this.batteryLevel--;
+        }
+        readMessage() {
+            if (this.isOnOrOff()) {
+                let temp = "";
+                for (let i = 0; i < this.inboxMessage.length; i++) {
+                    temp += (i + 1) + "." + this.inboxMessage[i] + "\n";
+                }
+                alert(temp);
+            } else {
+                alert("Diện thoại đang tắt")
+            }
+            this.batteryLevel--;
+        }
+    }
+    let iphone=new Mobile(true,100);
+    let samsung=new Mobile(true,100);
+    iphone.typeMessage();
+    iphone.typeMessage();
+    iphone.typeMessage();
+    iphone.sendAndReceiveMessage(samsung);
+    samsung.readMessage();
+</script>
+</body>
+</html>
+

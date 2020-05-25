@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="doReady()">
+<h3 id="speed"></h3>
+<img id="car" src="Images/carUp.png" style="position:absolute;left:600px; top:250px;" width="200"/>
+<img id="coin" src="Images/coin.png" style="position:absolute;left:auto;top:auto;" width="100" width="90"/>
+
+<script>
+    let car = document.getElementById("car");
+    let speed = 2;
+    document.getElementById("speed").innerHTML = "Speed: " + speed;
+    let myInterval;
+    function upArrowPressedInterval() {
+        myInterval = setInterval(upArrowPressed,100);
+    }
+    function downArrowPressedInterval() {
+        myInterval = setInterval(downArrowPressed,100);
+    }
+    function rightArrowPressedInterval() {
+        myInterval = setInterval(rightArrowPressed,100);
+    }
+    function leftArrowPressedInterval() {
+        myInterval = setInterval(leftArrowPressed,100);
+    }
+
+    function upArrowPressed() {
+        car.src = "Images/carUp.png";
+        car.style.top = parseInt(car.style.top) - speed*3 + 'px';
+    }
+    function downArrowPressed() {
+        car.src = "Images/carDown.png";
+        car.style.top = parseInt(car.style.top) + speed*3 + 'px';
+    }
+    function leftArrowPressed() {
+        car.src = "Images/carLeft.png";
+        car.style.left = parseInt(car.style.left) - speed*3 + 'px';
+    }
+    function rightArrowPressed() {
+        car.src = "Images/carRight.png";
+        car.style.left = parseInt(car.style.left) + speed*3 + 'px';
+
+    }
+
+    function moveSelection(i) {
+        switch (i.keyCode) {
+            case 16:
+                if (speed>1) {
+                    speed--;
+                }
+                document.getElementById("speed").innerHTML = "Speed: " + speed;
+                switch (a.keyCode) {
+                    case 37:
+                        leftArrowPressed();
+                        break;
+                    case 39:
+                        rightArrowPressed();
+                        break;
+                    case 38:
+                        upArrowPressed();
+                        break;
+                    case 40:
+                        downArrowPressed();
+                        break;
+                }
+                break;
+            case 17:
+                if (speed<5) {
+                    speed++;
+                }
+                document.getElementById("speed").innerHTML = "Speed: " + speed;
+                switch (a.keyCode) {
+                    case 37:
+                        leftArrowPressed();
+                        break;
+                    case 39:
+                        rightArrowPressed();
+                        break;
+                    case 38:
+                        upArrowPressed();
+                        break;
+                    case 40:
+                        downArrowPressed();
+                        break;
+                }
+
+            case 37:
+                clearInterval(myInterval);
+                leftArrowPressedInterval();
+                break;
+            case 39:
+                clearInterval(myInterval);
+                rightArrowPressedInterval();
+                break;
+            case 38:
+                clearInterval(myInterval);
+                upArrowPressedInterval();
+                break;
+            case 40:
+                clearInterval(myInterval);
+                downArrowPressedInterval();
+                break;
+            case 32:
+                clearInterval(myInterval);
+                break;
+        }
+    }
+    function doReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+</body>
+</html>

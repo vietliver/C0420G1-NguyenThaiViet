@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects</title>
+</head>
+<body>
+<div id="game"></div>
+<script>
+    let speed = 20;
+    class Hero {
+        constructor(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+        }
+
+        getHeroElement() {
+            return "<img width='" + this.size + "'" +
+                "height='" + this.size + "'" +
+                "src='" + this.image + "'" +
+                "style='top: " + this.top + "px; left: " +
+                this.left + "px; position: absolute'>"
+        }
+
+        moveRight() {
+            this.left += speed;
+            console.log("left: " + this.left);
+            console.log("top: " + this.top);
+        }
+        moveLeft() {
+            this.left -= speed;
+            console.log("left: " + this.left);
+            console.log("top: " + this.top);
+        }
+        moveUp() {
+            this.top -= speed;
+            console.log("left: " + this.left);
+            console.log("top: " + this.top);
+        }
+        moveDown() {
+            this.top += speed;
+            console.log("left: " + this.left);
+            console.log("top: " + this.top);
+        }
+    }
+
+    let hero = new Hero("goku.png", 0, 0, 300);
+    speed = 50;
+    function Right() {
+        if (hero.left < window.innerWidth - hero.size) {
+            hero.moveRight();
+        }
+        document.getElementById("game").innerHTML = hero.getHeroElement();
+    }
+    setInterval(Right,100);
+
+    /*function Left() {
+        if (hero.left > window.innerWidth - hero.size) {
+            hero.moveLeft();
+        }
+        document.getElementById("game").innerHTML = hero.getHeroElement();
+    }
+    setInterval(Left,100);
+
+    function Up() {
+        if (hero.top < window.innerHeight - hero.size) {
+            hero.moveUp();
+        }
+        document.getElementById("game").innerHTML = hero.getHeroElement();
+    }
+    setInterval(Up,100);
+
+    function Down() {
+        if (hero.top > window.innerHeight - hero.size) {
+            hero.moveDown();
+        }
+        document.getElementById("game").innerHTML = hero.getHeroElement();
+    }
+    setInterval(Down,100);*/
+
+</script>
+</body>
+</html>
