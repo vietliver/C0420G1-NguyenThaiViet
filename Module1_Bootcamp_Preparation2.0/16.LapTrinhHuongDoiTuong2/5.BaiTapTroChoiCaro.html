@@ -33,7 +33,7 @@
         for (let i = 0; i < 20; i++) {
             stringTable += "<tr>";
             for (let j = 0; j < 20; j++) {
-                stringTable += '<td onclick="play('+i+','+j+')">' + array[i][j] + "</td>";
+                stringTable += '<td onclick="play('+i+','+j+')">' + array[i][j] + "</td>"; // <td onclick='play(2,3)'></td>
             }
             stringTable += "</tr>";
         }

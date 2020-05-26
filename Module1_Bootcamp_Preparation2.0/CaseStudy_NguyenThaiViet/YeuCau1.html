@@ -17,11 +17,36 @@
     let rentDays = prompt("Input your rent days: ");
     let typeService = prompt("Input your type service: ");
     let typeRoom = prompt("Input your type room: ");
-    let totalPay = 300 * rentDays * (1 - discount/100);
+    let typeServicePrice;
 
-    alert("Name: " + name + ". Cmnd: " + cmnd);
-    alert("Total Pay = " + totalPay);
+    switch (typeService) {
+            case "Villa": {
+                typeServicePrice = 500;
+                break;
+            }
+            case "House": {
+                typeServicePrice = 300;
+                break;  
+            }   
+            case "Room": {
+                typeServicePrice = 100;  
+                break;
+            }       
+    }
+    let totalPay = typeServicePrice * rentDays * (1 - discount/100);
 
+    alert("Name: " + name + "\n" +
+         "Cmnd: " + cmnd + "\n" +
+         "Birthday: " + birthday + "\n" +
+         "Email: " + email + "\n" +
+         "Address: " + address + "\n" +
+         "Customer type: " + typeCustomer + "\n" +
+         "Discount: " + discount + "\n" +
+         "Quantity: " + quantityIncluded + "\n" +
+         "Rent days: " + rentDays + "\n" +
+         "Service type: " + typeService + "\n" +
+         "Room type: " + typeRoom + "\n" +
+         "Total pay: " + totalPay);
 </script>
 
 </body>
