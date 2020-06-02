@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrEmployees = [];
+    let regexDate = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
+    class Employee {
+        constructor() {
+        }
+        setUserName (userName) {
+            this.userName = userName;
+        }
+        getUserName () {
+            return this.userName;
+        }
+        setName (name) {
+            this.name = name;
+        }
+        getName () {
+            return this.name;
+        }
+        setPassword (password) {
+            this.password = password;
+        }
+        getPassword () {
+            return this.password;
+        }
+        setBirthday (birthday) {
+            this.birthday = birthday;
+        }
+        getBirthday () {
+            return this.birthday;
+        }
+        setCmnd (cmnd) {
+            this.cmnd = cmnd;
+        }
+        getCmnd () {
+            return this.cmnd;
+        }
+        setGender (gender) {
+            this.gender = gender;
+        }
+        getGender () {
+            return this.gender;
+        }
+        setAddress (address) {
+            this.address = address;
+        }
+        getAddress () {
+            return this.address;
+        }
+        setPhoneNumber (phoneNumber) {
+            this.phoneNumber = phoneNumber;
+        }
+        getPhoneNumber () {
+            return this.phoneNumber;
+        }
+    }
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Register New Employee" + "\n"
+            + "2. Display Employee" + "\n" + "3. Login" + "\n"
+           ))
+        switch (choose) {
+            case 1: {
+                registerNewEmployee();
+                break;
+            }
+            case 2: {
+                displayEmployee();
+                break;
+            }
+            case 3: {
+                login();
+                break;
+            }
+            default: {
+                alert("Failed");
+            }
+        }
+    }
+    displayMainMenu();
+
+    function registerNewEmployee() {
+        let check = false;
+        let employee = new Employee();
+        let username = prompt("Input your username: ");
+        let password = prompt("Input your password: ");
+        let name = prompt("Input your name: ");
+        let birthday;
+        do {
+            birthday = prompt("Input your birthday: ");
+            if (regexDate.test(birthday)) {
+                check = true;
+            } else {
+                alert("Birthday khong hop le")
+            }
+        } while (!check)
+
+        let cmnd = prompt("Input your cmnd: ");
+        let gender = prompt("Input your gender");
+        let address = prompt("Input your address: ");
+        let phoneNumber = prompt("Input your phone number: ");
+
+        employee.setUserName(username);
+        employee.setPassword(password);
+        employee.setName(name);
+        employee.setBirthday(birthday);
+        employee.setCmnd(cmnd);
+        employee.setGender(gender);
+        employee.setAddress(address);
+        employee.setPhoneNumber(phoneNumber);
+        arrEmployees.push(employee);
+        alert("Successfully added a new employee");
+        displayMainMenu();
+    }
+
+    function displayEmployee() {
+        let temp = "";
+        for (let i = 0; i < arrEmployees.length; i++) {
+            temp += (i+1) + ". Employee Name: " + arrEmployees[i].getName() + "\n";
+        }
+        let chooseEmployeeToDisplay = prompt("Choose employee to display: " + "\n" + temp);
+        alert("Name: " + arrEmployees[chooseEmployeeToDisplay-1].getName() + "\n" +
+            "Username: " + arrEmployees[chooseEmployeeToDisplay-1].getUserName() + "\n" +
+            "Password: " + arrEmployees[chooseEmployeeToDisplay-1].getPassword() + "\n" +
+            "Birthday: " + arrEmployees[chooseEmployeeToDisplay-1].getBirthday() + "\n" +
+            "Cmnd: " + arrEmployees[chooseEmployeeToDisplay-1].getCmnd() + "\n" +
+            "Gender: " + arrEmployees[chooseEmployeeToDisplay-1].getGender() + "\n" +
+            "Address: " + arrEmployees[chooseEmployeeToDisplay-1].getAddress() + "\n" +
+            "Phone number: " + arrEmployees[chooseEmployeeToDisplay-1].getPhoneNumber());
+        displayMainMenu();
+    }
+
+    function login() {
+        let check = false;
+        let inputUsername;
+        let inputPassword;
+        let temp = "";
+        for (let i = 0; i < arrEmployees.length; i++) {
+            temp += (i+1) + ". Employee Name: " + arrEmployees[i].getName() + "\n";
+        }
+        let chooseEmployeeToLogin = prompt("Choose employee to login: " + "\n" + temp);
+        do {
+            inputUsername = prompt("Enter your username: ");
+            inputPassword = prompt("Enter your password: ");
+            if (inputUsername == arrEmployees[chooseEmployeeToLogin-1].getUserName() &&
+                inputPassword == arrEmployees[chooseEmployeeToLogin-1].getPassword()) {
+                check = true;
+                alert("Dang nhap thanh cong");
+            } else {
+                alert("Sai username hoac password.")
+            }
+        } while (!check)
+        displayMainMenu();
+    }
+</script>
+</body>
+</html>

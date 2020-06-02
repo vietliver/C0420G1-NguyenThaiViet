@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let check = false;
+    let n ;
+    do {
+        n = prompt("Nhap vao 1 so nguyen duong lon hon 6:");
+        if (!isNaN(n)) {
+            n = parseFloat(n);
+            if (Number.isInteger(n) && n>6) {
+                check = true;
+            }
+        }
+        if (!check) {
+            alert("So ban nhap sai dinh dang. Vui long nhap lai.");
+        }
+    } while (!check);
+
+    let array = [];
+    for (let i = 0; i < n; i++) {
+        array[i] = prompt("Nhap gia tri cua mang");
+    }
+
+    alert("Mang chua sap xep: " + "\n" + array.join());
+    alert("Mang sap xep theo thu tu tang dan " + "\n" + array.sort(function (a,b) {
+        return a-b;
+    }).join());
+</script>
+</body>
+</html>

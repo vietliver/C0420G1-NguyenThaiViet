@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let regexEmail = /^\S+@\S+\.\S+$/;
+    let email;
+    let check = false;
+    do {
+        email = prompt("Input your email: ");
+        if (regexEmail.test(email)) {
+            check = true;
+        } else {
+            alert("Sai dinh dang email. Xin nhap lai")
+        }
+    } while (!check)
+
+    let position = email.indexOf("@");
+    alert("Xin chao " + email.slice(0,position));
+</script>
+</body>
+</html>

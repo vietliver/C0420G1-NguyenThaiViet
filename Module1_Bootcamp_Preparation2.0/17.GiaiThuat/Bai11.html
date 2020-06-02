@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Nhap so phan tu ban muon"));
+    let array = new Array(n);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = parseInt(prompt("Nhap phan tu so nguyen thu " + (i+1)));
+    }
+    let sumOdd = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 != 0) {
+            sumOdd += array[i];
+        }
+    }
+    alert("Tong cac so le la: " + sumOdd);
+    let k = parseInt(prompt("Nhap phan tu k"));
+    let checkK = false;
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] == k) {
+            alert("Phan tu k o vi tri so: " + i);
+            checkK = true;
+            break;
+        } else {
+            checkK = false;
+        }
+    }
+    if (!checkK) {
+        alert("Khong tim thay k");
+    }
+
+    alert(array.sort(function (a,b) {
+        return a-b;
+    }).join(" "));
+
+    let b = parseInt(prompt("Chen them phan tu b"));
+    array.push(b);
+
+    alert(array.sort(function (a,b) {
+        return a-b;
+    }).join(" "));
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Enter a string");
+    for (let i = 0; i < input.length; i++) {
+        document.write(input.charAt(i) + "<br>");
+    }
+
+    let arrayInput = input.split(" ");
+    for (let i = 0; i < arrayInput.length; i++) {
+        document.write(arrayInput[i] + "<br>");
+    }
+
+    document.write("So ky tu trong chuoi la: " + input.length + "<br>");
+    document.write("So tu trong chuoi la: " + arrayInput.length + "<br>");
+
+    var arr = input.split("");
+    var occurrences = { };
+    for (var i = 0; i < arr.length; i++) {
+        occurrences[arr[i]] = (occurrences[arr[i]] || 0) + 1;
+    }
+
+    console.log(occurrences);        // {ab: 3, pq: 1, mn: 2}
+    console.log(occurrences['mn']);  // 2
+</script>
+</body>
+</html>

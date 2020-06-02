@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            position: absolute;
+            left: 100px;
+        }
+        button {
+            position: absolute;
+            left: 100px;
+            top: 230px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <h1>Register Employee Info</h1>
+    <label>Username:</label>
+    <input id="userName">
+    <br>
+    <label>Password:</label>
+    <input id="password">
+    <br>
+    <label>Name:</label>
+    <input id="name">
+    <br>
+    <label>Birthday:</label>
+    <input id="birthday">
+    <br>
+    <label>CMND:</label>
+    <input id="cmnd">
+    <br>
+    <label>Gender:</label>
+    <input id="gender">
+    <br>
+    <label>Address:</label>
+    <input id="address">
+    <br>
+    <label>Phone:</label>
+    <input id="phoneNumber">
+    <br>
+    <button type="submit" onclick="register();">Submit</button>
+
+</form>
+<script>
+    let arrEmployees = [];
+    class Employee {
+        constructor() {
+        }
+        setUserName (userName) {
+            this.userName = userName;
+        }
+        getUserName () {
+            return this.userName;
+        }
+        setName (name) {
+            this.name = name;
+        }
+        getName () {
+            return this.name;
+        }
+        setPassword (password) {
+            this.password = password;
+        }
+        getPassword () {
+            return this.password;
+        }
+        setBirthday (birthday) {
+            this.birthday = birthday;
+        }
+        getBirthday () {
+            return this.birthday;
+        }
+        setCmnd (cmnd) {
+            this.cmnd = cmnd;
+        }
+        getCmnd () {
+            return this.cmnd;
+        }
+        setGender (gender) {
+            this.gender = gender;
+        }
+        getGender () {
+            return this.gender;
+        }
+        setAddress (address) {
+            this.address = address;
+        }
+        getAddress () {
+            return this.address;
+        }
+        setPhoneNumber (phoneNumber) {
+            this.phoneNumber = phoneNumber;
+        }
+        getPhoneNumber () {
+            return this.phoneNumber;
+        }
+    }
+
+    function register() {
+        let employee = new Employee();
+        employee.setUserName(document.getElementById("userName").value);
+        alert(employee.getUserName());
+        employee.setPassword(document.getElementById("password").value);
+        employee.setName(document.getElementById("name").value);
+        employee.setBirthday(document.getElementById("birthday").value);
+        employee.setCmnd(document.getElementById("cmnd").value);
+        employee.setGender(document.getElementById("gender").value);
+        employee.setAddress(document.getElementById("address").value);
+        employee.setPhoneNumber(document.getElementById("phoneNumber").value);
+        arrEmployees.push(employee);
+        alert("Successfully added a new employee");
+    }
+
+    alert(arrEmployees.[0].join());
+</script>
+</body>
+</html>
