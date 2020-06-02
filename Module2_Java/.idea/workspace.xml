@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbbcd9fb-6ad9-456e-9c31-633952779928" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai11.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai12.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/17.GiaiThuat/Bai9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/Exam/Cau 4 - 2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/Exam/Cau1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/Exam/Cau2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/Exam/Cau3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/Exam/Cau4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/CaseStudy_NguyenThaiViet/YeuCau5.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Module1_Bootcamp_Preparation2.0/CaseStudy_NguyenThaiViet/YeuCau5.html" afterDir="false" />
-    </list>
+    <list default="true" id="bbbcd9fb-6ad9-456e-9c31-633952779928" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +41,7 @@
       <option name="presentableId" value="Default" />
       <updated>1591070088484</updated>
       <workItem from="1591070089646" duration="99000" />
+      <workItem from="1591070481193" duration="71000" />
     </task>
     <servers />
   </component>
@@ -71,7 +53,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
