@@ -1,3 +1,4 @@
+/*
 package ThucHanh;
 package com.codegym;
 
@@ -36,4 +37,4 @@ public class StaticMethod {
         s2.display();
         s3.display();
     }
-}
+}*/

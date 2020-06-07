@@ -1,3 +1,4 @@
+/*
 package ThucHanh;
 package com.codegym;
 public class Car {
@@ -21,3 +22,4 @@ public class StaticProperty {
         System.out.println(Car.numberOfCars);
     }
 }
+*/
