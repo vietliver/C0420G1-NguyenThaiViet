@@ -1,6 +1,8 @@
 package CacDoiTuongHinhHoc;
 
-public class Square extends Rectangle {
+import Colorable.Colorable;
+
+public class Square extends Rectangle implements Colorable {
     public Square() {
     }
 
@@ -37,5 +39,10 @@ public class Square extends Rectangle {
                 + getSide()
                 + ", which is a subclass of "
                 + super.toString();
+    }
+
+    @Override
+    public void howToColor() {
+        System.out.println("Color all four sides for the square");
     }
 }
