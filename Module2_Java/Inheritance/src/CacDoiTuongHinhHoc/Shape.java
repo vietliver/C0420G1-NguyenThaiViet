@@ -1,10 +1,12 @@
 package CacDoiTuongHinhHoc;
 
 public class Shape {
-    private String color = "green";
-    private Boolean filled = true;
+    private String color;
+    private Boolean filled;
 
     public Shape() {
+        this.color = "green";
+        this.filled = true;
     }
 
     public Shape(String color, Boolean filled) {
