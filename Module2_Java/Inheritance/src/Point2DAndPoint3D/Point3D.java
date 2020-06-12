@@ -3,6 +3,7 @@ package Point2DAndPoint3D;
 public class Point3D extends Point2D {
     float z;
 
+
     public Point3D(float z) {
         this.z = z;
     }
@@ -28,6 +29,7 @@ public class Point3D extends Point2D {
 
     public float[] getXYZ() {
         return new float[] {super.getX(),super.getY(),z};
+
     }
 
     @Override
